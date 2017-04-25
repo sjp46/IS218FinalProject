@@ -18,7 +18,7 @@
         
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
-        include('database_error.php');
+        include('database_error.html');
         exit();
     }
 ?>
