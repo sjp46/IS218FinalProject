@@ -1,7 +1,7 @@
 <?php
 	require_once 'database.php';
 	
-	$query = 'SELECT * FROM Final Project ORDER BY id';
+	$query = 'SELECT * FROM finalproject ORDER BY id';
 	$statement = $db->prepare($query);
 	$statement->execute();
 	$categories = $statement->fetchAll();
