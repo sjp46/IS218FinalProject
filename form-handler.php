@@ -1,9 +1,11 @@
 <html>
 <body>
 
-Welcome <?php 
-	if (isset($_POST["name"])){
-		echo $_POST["name"];
+Welcome 
+
+<?php 
+	if (isset($_POST["fname"])){
+		echo $_POST["fname"];
 	}
 	else {
 		echo "(you didn't provide a name)";
