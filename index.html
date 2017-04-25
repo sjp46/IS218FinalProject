@@ -80,30 +80,37 @@
                     <input type="submit">
                     <a href="https://web.njit.edu/~sjp46/finalproject/login.html" input type="button" value= "Log In"></a>
 
+
                 </form>         
             </div>
         </div>
     </div>
+                    <?php
+                        include_once 'index.php';
+                        if (!isset($_REQUEST ['email'])){
+                        header('HTTP/1.1 500 Internal server error');
+                        exit("ERROR: There was an error writing to the database, no email could be provided.");
+                        }
 
-    <?php
-        include_once 'index.php';
+                        $params = array(
+                            ":email" =>$_REQUEST['email']
+                            ":fname" =>$_REQUEST['fname']
+                            ":lname" =>$_REQUEST['lname']
+                            ":password" =>$_REQUEST['password']
+                            ":birthday" =>$_REQUEST['birthday']
+                            ":gender" =>$_REQUEST['gender']
+                            ":number" =>$_REQUEST['number']
+                        )
+                        $results = prepareAndExecute('INSERT INTO finalproject (email)
+                            VALUES (:email)', $params);
+                        if ($results) == NULL || !is_numeric($results)){
+                        header ('HTTP/1.1 500 Internal server error');
+                        exit("ERROR: There was an error writing to the database.");
+                        
+                        }
 
-        if (!isset($_REQUEST ['email'])){
-            header('HTTP/1.1 500 Internal server error');
-            exit("ERROR: There was an error writing to the database, no email could be provided.");
-        }
+                    ?>
 
-        $params = array(
-            ":email" =>$_REQUEST['email']
-            ":fname" =>$_REQUEST['fname']
-            ":lname" =>$_REQUEST['lname']
-            ":password" =>$_REQUEST['password']
-            ":birthday" =>$_REQUEST['birthday']
-            ":gender" =>$_REQUEST['gender']
-            ":number" =>$_REQUEST['number']
-
-
-        )
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
