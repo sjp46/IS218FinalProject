@@ -11,7 +11,7 @@
 	
 
         //$db = new PDO($dsn, $username, $password);
-        $db = new PDO("mysql:host=mysql1.njit.edu;dbname=$database", $username, $password);
+        $db = new PDO("mysql:host=$hostname;njit.edu;dbname=$database", $username, $password);
         
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
