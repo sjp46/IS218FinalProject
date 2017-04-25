@@ -18,7 +18,7 @@
 	$gender = $_POST['gender'];
 
 	//create connection
-	$conn = new mysqli($hostname, $username, $password, $database);
+	$conn = new mysqli(sql1.njit.edu, sjp46, 6IX59hy8y, sjp46);
 
 	//check connection
 	if ($conn->connection_error){
@@ -35,7 +35,7 @@
 	}
 	
 	$conn-close();
-	
+
 	try {
         
         //$db = new PDO($dsn, $username, $password);
