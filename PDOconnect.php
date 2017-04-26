@@ -1,6 +1,7 @@
 <?php
 // if(isset($_POST['submit']))
 require('database.php');
+include('form-handler.html')
 {
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
@@ -24,25 +25,3 @@ $statement->closeCursor();
 
     
     
-<!DOCTYPE html>
-<html>
-
-<!-- the head section -->
-<head>
-    <title>IS218</title>
-</head>
-
-<!-- the body section -->
-<body>
-		<main>
-			
-	    <?php foreach ($results as $oneLine) : ?>
-	    <div>
-	        <?php echo $oneLine['email']; ?>
-	        <br /><br />
-	    </div>
-		<?php endforeach; ?>		
-			
-		</main>
-</body>
-</html>

@@ -9,11 +9,13 @@
 	$password = '6IX59hy8y';
 	$database = 'sjp46';
 	
+	try{
 
+	
         //$db = new PDO($dsn, $username, $password);
         $db = new PDO("mysql:host=$hostname;njit.edu;dbname=$database", $username, $password);
         
-    } catch (PDOException $e) {
+    }catch (PDOException $e) {
         $error_message = $e->getMessage();
         include('database_error.html');
         exit();
