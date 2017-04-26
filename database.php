@@ -4,16 +4,16 @@
 	
 	
 	
-	$hostname = 'sql1.njit.edu';
-	$username = 'sjp46';
-	$password = '6IX59hy8y';
+	$hostname = 'localhost';
+	$username = 'root';
+	$password = 'mysql';
 	$database = 'sjp46';
 	
 	try{
 
 	
         //$db = new PDO($dsn, $username, $password);
-        $db = new PDO("mysql:host=$hostname;njit.edu;dbname=$database", $username, $password);
+        $db = new PDO("mysql:host=$hostname;localhost;dbname=$database", $username, $password);
         
     }catch (PDOException $e) {
         $error_message = $e->getMessage();
