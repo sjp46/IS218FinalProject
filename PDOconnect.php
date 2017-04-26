@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submit']))
+// if(isset($_POST['submit']))
 require('database.php');
 {
 $fname=$_POST['fname'];
@@ -10,7 +10,7 @@ $birthday=$_POST['birthday'];
 $gender=$_POST['gender'];
 $password=$_POST['password'];
 
-$sql="INSERT INTO acc (fname,lname,email,number,birthday,gender,password) VALUES (
+$sql="INSERT INTO finalproject (fname,lname,email,number,birthday,gender,password) VALUES (
 '$fname','$lname','$email','$number','$birthday','$gender','$password')";
 
 
@@ -19,15 +19,7 @@ $statement->execute();
 $statement->closeCursor();
 }
 ?>
-<!-- <?php
-	require_once 'database.php';
-	
-	$query = 'SELECT * FROM finalproject ORDER BY id';
-	$statement = $db->prepare($query);
-	$statement->execute();
-	$categories = $statement->fetchAll();
-	$statement->closeCursor();
-?> -->
+
 
 
     
