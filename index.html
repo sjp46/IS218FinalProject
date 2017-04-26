@@ -70,19 +70,23 @@
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5"><b>Enter data to view To-Do List</b>.</h1>
                 <form action="form-handler.php" method="get">
-                    First Name: <input type="text" name="fname"><br>
-                    Last Name: <input type="text" name="lname"><br>
-                    E-mail: <input type="text" name="email"><br>
-                    Password: <input type="password" name="password"><br>
-                    Phone Number: <input type = "tel" name="number"><br>
-                    Birthday: <input type = "date" name="birthday"><br>
-                    Gender: <input type = "text" name="gender"><br>
+                    First Name: <input type="text" name="fname" value =""><br>
+                    Last Name: <input type="text" name="lname" value =""><br>
+                    E-mail: <input type="text" name="email" value =""><br>
+                    Password: <input type="password" name="password" value =""><br>
+                    Phone Number: <input type = "tel" name="number" value =""><br>
+                    Birthday: <input type = "date" name="birthday" value =""><br>
+                    Gender: <input type = "text" name="gender" value =""><br>
                     <input type="submit">
                     <a href="https://web.njit.edu/~sjp46/finalproject/login.html" input type="button" value= "Log In"></a>
-
-
-
-                </form>         
+                </form>  
+                <?php       
+                    if (isset($_POST["fname"])){
+                    echo $_POST["fname"];
+                    }
+                    else {
+                    echo "(you didn't provide a name)";
+                ?>
             </div>
         </div>
     </div>

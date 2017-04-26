@@ -1,4 +1,25 @@
 <?php
+// if(isset($_POST['submit']))
+require('database.php');
+{
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$birthday=$_POST['birthday'];
+$gender=$_POST['gender'];
+$password=$_POST['password'];
+
+$sql="INSERT INTO acc (fname,lname,email,phone,birthday,gender,password) VALUES (
+'$fname','$lname','$email','$phone','$birthday','$gender','$password')";
+
+
+$statement = $db->prepare($sql);
+$statement->execute();
+$statement->closeCursor();
+}
+?>
+<!-- <?php
 	require_once 'database.php';
 	
 	$query = 'SELECT * FROM finalproject ORDER BY id';
@@ -6,7 +27,7 @@
 	$statement->execute();
 	$categories = $statement->fetchAll();
 	$statement->closeCursor();
-?>
+?> -->
 
 
     
@@ -16,7 +37,7 @@
 
 <!-- the head section -->
 <head>
-    <title>IS218 Test</title>
+    <title>IS218</title>
 </head>
 
 <!-- the body section -->
