@@ -1,3 +1,12 @@
+<?php
+    require_once 'database.php';
+    
+    $query = 'SELECT * FROM finalproject ORDER BY id';
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $categories = $statement->fetchAll();
+    $statement->closeCursor();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,13 +60,7 @@
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Incomplete Items</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Complete Items</a>
+                        <a class="nav-link" href="index.html">Logout <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -68,11 +71,20 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <form action="form-handler.php" method="get">
-                    E-mail: <input type="email" name="email"><br>
-                    Password: <input type="password" name="password"><br>
-                    <input type="submit">
-                </form>   
+                 <h4>Welcome, </h4> 
+                    <?php 
+                        if (isset($_POST["email"])){
+                            echo $_POST["email"];
+                            }
+                    ?>
+                    <a href="addtask.php"><input type="button" value= "Add New Task"></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Complete Items</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Incomplete Items</a>
+                    </li>
+ 
             </div>
         </div>
     </div>

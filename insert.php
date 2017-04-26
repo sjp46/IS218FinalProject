@@ -2,7 +2,7 @@
 // if(isset($_POST['submit']))
 require('database.php');
 include('form-handler.php')
-{
+
 	$fname=$_POST['fname'];
 	$lname=$_POST['lname'];
 	$email=$_POST['email'];
@@ -19,7 +19,7 @@ include('form-handler.php')
 	$statement = $db->prepare($sql);
 	$statement->execute();
 	$statement->closeCursor();
-}
+
 ?>
 
 
