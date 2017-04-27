@@ -56,7 +56,7 @@
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="https://web.njit.edu/~sjp46/finalproject/index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="http://127.0.0.1/finalproject/index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +70,7 @@
                 <form action="insert.php" method="get">
                     E-mail: <input type="email" name="email"><br>
                     Password: <input type="password" name="password"><br>
-                    <a href="https://web.njit.edu/~sjp46/finalproject/todo.php"><input type="button" value= "Log In"></a>
+                    <a href="http://127.0.0.1/finalproject/todo.php"><input type="button" value= "Log In"></a>
                 </form>   
 
             </div>
