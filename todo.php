@@ -60,7 +60,7 @@
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Logout <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="https://web.njit.edu/~sjp46/finalproject/index.html">Logout <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
                             echo $_POST["email"];
                             }
                     ?>
-                    <a href="addtask.php"><input type="button" value= "Add New Task"></a>
+                    <a href="https://web.njit.edu/~sjp46/finalproject/addtask.php"><input type="button" value= "Add New Task"></a>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Complete Items</a>
                     </li> 
